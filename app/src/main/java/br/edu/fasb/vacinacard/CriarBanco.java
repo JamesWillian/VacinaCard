@@ -8,7 +8,8 @@ public class CriarBanco extends SQLiteOpenHelper{
 
     public static final String NOME_BANCO = "vacinacard.db";
     public static final String TABELA = "USUARIO";
-    public static final String ID = "_id";
+    public static final String ID = "ID";
+    public static final String NOME = "NOME";
     public static final int VERSAO = 1;
 
     public CriarBanco(Context context){
@@ -18,7 +19,8 @@ public class CriarBanco extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE "+TABELA+"("+
-                ID+" INTEGER PRIMARY KEY AUTOINCREMENT"+
+                ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                NOME+" TEXT"+
                 ")";
 
         db.execSQL(sql);
