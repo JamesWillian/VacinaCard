@@ -35,19 +35,19 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/txtIdade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Idade:" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/txtEndereco"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Endereço:" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/txtTipoSangue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Tipo Sanguineo:" />
@@ -59,29 +59,24 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/txtMae"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Mãe:" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/txtPai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pai:" />
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Alérgico:" />
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
 
     <ListView
-        android:id="@+id/lvCampanhas"
+        android:id="@+id/lvVacinas"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_weight="3" />

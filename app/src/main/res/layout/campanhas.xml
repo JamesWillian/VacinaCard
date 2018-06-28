@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lvCampanhas"
+        android:layout_width="match_parent"
+        android:layout_height="255dp" />
+
+    <TextView
+        android:id="@+id/txtVacinado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vacinado!"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtCamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Campanha Contra Gripe"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data: 20/03/2015"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local: Posto de Saúde"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtProxDose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Próxima Dose: Após 5 anos"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+</LinearLayout>

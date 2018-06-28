@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">VacinaCard</string>
+    <string name="title_activity_login">Login</string>
+
+    <string name="strCPF">CPF</string>
+    <string name="strSenha">Senha</string>
+    <string name="strLogin">Acessar</string>
+
 </resources>
