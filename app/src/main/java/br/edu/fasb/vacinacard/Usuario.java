@@ -7,14 +7,19 @@ public class Usuario {
     private String Mae;
     private String Pai;
     private String TipoSangue;
+    private String Cpf;
+    private String Senha;
 
-    public Usuario(String nome, int idade, String endereco, String mae, String pai, String tiposangue){
+    public Usuario(String nome, int idade, String endereco, String mae, String pai, String tiposangue, String cpf, String senha){
         this.Nome = nome;
         this.Idade = idade;
         this.Endereco = endereco;
         this.Mae = mae;
         this.Pai = pai;
         this.TipoSangue = tiposangue;
+        this.Cpf = cpf;
+        this.Senha = senha;
+
     }
 
     public String getNome() {
@@ -63,6 +68,22 @@ public class Usuario {
 
     public void setTipoSangue(String tipoSangue) {
         TipoSangue = tipoSangue;
+    }
+
+    public String getCpf() {
+        return Cpf;
+    }
+
+    public void setCpf(String cpf) {
+        Cpf = cpf;
+    }
+
+    public String getSenha() {
+        return Senha;
+    }
+
+    public void setSenha(String senha) {
+        Senha = senha;
     }
 
     @Override

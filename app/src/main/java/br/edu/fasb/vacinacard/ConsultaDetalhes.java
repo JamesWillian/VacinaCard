@@ -1,7 +1,6 @@
 package br.edu.fasb.vacinacard;
 
 import android.app.Activity;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,21 +17,21 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConsultaUsuario {
+public class ConsultaDetalhes {
 
-    private String site = "http://gtx.net.br/vacinacard/consulta_user.php?";
+    private String site = "http://gtx.net.br/vacinacard/consulta_camp.php?";
     private URL url;
     private Activity contexto;
     private StringBuilder parametros = new StringBuilder();
 
-    public ConsultaUsuario( Activity contexto ) {
+    public ConsultaDetalhes(Activity contexto ) {
         this.contexto = contexto;
     }
 
-    public List<Usuario> getUsuario(String cpf, String senha ) {
+    public List<Vacinou> getDetalhes(String usuario, String campanha ) {
         //PREENCHE O PARAMETO COM O FILTRO DESEJADO
-        parametros.append( "&cpf="+ URLEncoder.encode(cpf));
-        parametros.append( "&senha="+ URLEncoder.encode(senha));
+        parametros.append( "&usuario="+ URLEncoder.encode(usuario));
+        parametros.append( "&campanha="+ URLEncoder.encode(campanha));
 
         //CRIA A URL DE BUSCA.
         String site = this.site + parametros.toString();
@@ -86,7 +85,7 @@ public class ConsultaUsuario {
                 return new ArrayList<>();
             }
 
-            List<Usuario> resultado = new ArrayList<>();
+            List<Vacinou> resultado = new ArrayList<>();
 
             try {
                 //TRABALHANDO COM JSON CONVERANDO O ARQUIVO TEXTO PARA JSON
@@ -100,17 +99,14 @@ public class ConsultaUsuario {
 
                 for ( int i = 0; i<lista.length(); i++ ) {
                     JSONObject object = lista.getJSONObject(i);
-                    Usuario usr = new Usuario(
-                            object.getString("nome"),
-                            object.getInt("idade"),
-                            object.getString("endereco"),
-                            object.getString("pai"),
-                            object.getString("mae"),
-                            object.getString("tiposangue"),
-                            "",
-                            "");
+                    Vacinou det = new Vacinou(
+                            object.getString("campanha"),
+                            object.getString("vacinado"),
+                            object.getString("data"),
+                            object.getString("local"),
+                            object.getString("proximadose"));
 
-                    resultado.add(usr);
+                    resultado.add(det);
 
                 }
 
